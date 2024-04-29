@@ -5,7 +5,7 @@ const Footer = () => {
     let date =new Date();
 
   return (
-    <footer>
+    <footer className="footer">
         <div> 
             CopyRight &copy; {date.getFullYear()}
         </div>

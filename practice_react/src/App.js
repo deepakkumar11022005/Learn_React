@@ -9,12 +9,8 @@ function App() {
 
   
   return (
-   <div className="App" style={{
-    border:'2px solid gray',
-    padding:'10px',
-  marginTop:'50px'
-   }}>
-     <Header />
+   <div className="body">
+    <Header />
     <Content />
     <Footer />
    </div>
