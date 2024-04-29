@@ -53,3 +53,6 @@
 .App-link {
   color: #61dafb;
 }
+.checked {
+  text-decoration: line-through;
+}

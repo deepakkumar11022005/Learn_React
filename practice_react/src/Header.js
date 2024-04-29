@@ -1,10 +1,13 @@
 import React from "react"
-function Header() {
+function Header({title}) {
     return (
        <header className="App-header">
-        <h1>TODO LIST</h1>
+        <h1>{title}</h1>
        </header>
     )
 }
-
+Header.defaultProps={
+    title:"TODO LIST",
+    name:"Deepakkumar"
+}
 export default Header
