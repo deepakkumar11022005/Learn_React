@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .App {
   text-align: center;
 }
@@ -14,26 +17,129 @@
 }
 
 .App-header {
-  height: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: absolute;
-  padding: 5px;
+  padding: 20px;
   top: 0;
   left: 0;
   right: 0;
-  color: rgb(91, 6, 91);
+  color: rgb(195, 2, 198);
+  text-shadow: 2px 2px 2px rgb(181, 180, 180);
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.addItem_search{
+  width: 100%;
+  display: flex;
+  justify-content: space-between !important;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  box-shadow: 3px 1px 15px rgb(227, 220, 220);
+  border-radius: 10px;
+  margin-bottom: 10px;
+/* margin-top: -50px; */
+position: absolute;
+top: 100px;
 
-.footer {
+}
+.content{
+  width: 80%;
+  box-shadow: 3px 1px 15px rgb(227, 220, 220);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  height: auto;
+  margin-left:15px;
+  margin-right: 15px;
+  padding: 20px;
+  background-color: rgb(249, 251, 253);
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 200px;
+  /* overflow: scroll; */
+}
+.items_ul{
+
+  width: 100%;
+ height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+.items_ul li{
+  width: 100%;
+  height: auto;
+  display: flex;
+  /* justify-content: space-between; */
+  background-color: transparent;
+  margin: 2px;
+  border-radius: 8px;
+  align-items: center;
+  border: transparent;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 500;
+  color: rgb(10, 10, 10);
+  box-shadow: -3px -2px 5px rgb(227, 220, 220);
+  /* background-color: aqua; */
+
+  
+}
+.trashCan{
+  text-align: end ;
+  padding: 1px;
+  width: 10%;
+  /* background-color: blue; */
+  cursor: pointer;
+}
+
+.checkBox{
+  padding: 12px;
+  margin-right: 30px;
+  width: 20%;
+  box-shadow: 1px 1px 5px rgb(80, 80, 196);
+  /* background-color: aqua; */
+ 
+}
+.label{
+  width: 80%;
+  /* background-color: aqua; */
+}
+
+
+.addItem{
+ padding: 10px;
+}
+.addItem input{
+ width: 100% ;
+  padding: 10px;
+  border-radius: 10px;
+  height: 40px;
+ }
+.search{
+  padding: 10px;
+}
+.date_time span{
+ margin-right: 20px;
+}
+.footer {
   height: 30px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(254, 253, 254);
+  color: rgb(10, 10, 10);
   text-align: center;
   font-size: .8em;
   font-weight: bold;
@@ -41,13 +147,14 @@
 }
 
 .body {
-  background-color: rgb(235, 225, 244);
+  background-color: rgb(254, 253, 254);
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  overflow: hidden;
 }
 
 .App-link {

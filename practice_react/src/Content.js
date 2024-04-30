@@ -2,28 +2,35 @@ import React from "react"
 import './App.css'
 import { FaTrash } from "react-icons/fa";
 
-const Content = ({items,handleCheckBox,handleTrashBox}) => {
-   
+const Content = ({ items, handleCheckBox, handleTrashBox }) => {
+
     return (
-        <div>
-        
-           {items.length!==0 ?
-            <ul>
+        <div className="content col-lg-8 col-md-6 col-sm-12">
 
-                {
-                    items.map((item) => (
-                        <li key={item.Id}>
-                            <input 
-                            type="checkbox" 
-                            checked={item.checked} onChange={() => handleCheckBox(item.Id)} />
-                            <label className={item.checked ? 'checked' : ''}>{item.Content}</label>
-                            <button onClick={() => handleTrashBox(item.Id)}><FaTrash /></button>
-                        </li>
-                    ))
-                }
+            {items.length !== 0 ?
+                <ul className="list-group items_ul">
 
-            </ul>
-            : <p>No Content</p>
+                    {
+                        items.map((item) => (
+                            <li key={item.Id} className="list-group-item items">
+                                <input
+                                    type="checkbox"
+                                    className="form-check-input checkBox"
+                                    checked={item.checked} onChange={() => handleCheckBox(item.Id)} />
+                                <div className="label">
+                                    <label className={item.checked ? 'checked ' : ''}>{item.Content}</label>
+                                    <div className="date_time">
+                                        <span className="date">{item.date}</span>
+                                        <span>{item.time}</span>
+                                    </div>
+                                </div>
+                                <FaTrash onClick={() => handleTrashBox(item.Id)} className="trashCan" />
+                            </li>
+                        ))
+                    }
+
+                </ul>
+                : <p>No Content</p>
             }
         </div>
     )
