@@ -12,11 +12,11 @@ const Content = ({ items, handleCheckBox, handleTrashBox }) => {
 
                     {
                         items.map((item) => (
-                            <li key={item.Id} className="list-group-item items">
+                            <li key={item.id} className="list-group-item items">
                                 <input
                                     type="checkbox"
                                     className="form-check-input checkBox"
-                                    checked={item.checked} onChange={() => handleCheckBox(item.Id)} />
+                                    checked={item.checked} onChange={() => handleCheckBox(item.id)} />
                                 <div className="label">
                                     <label className={item.checked ? 'checked ' : ''}>{item.Content}</label>
                                     <div className="date_time">
@@ -24,7 +24,7 @@ const Content = ({ items, handleCheckBox, handleTrashBox }) => {
                                         <span>{item.time}</span>
                                     </div>
                                 </div>
-                                <FaTrash onClick={() => handleTrashBox(item.Id)} className="trashCan" />
+                                <FaTrash onClick={() => handleTrashBox(item.id)} className="trashCan" />
                             </li>
                         ))
                     }
